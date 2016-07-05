@@ -20,6 +20,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -117,6 +118,8 @@
     <Content Include="Content\themes\base\tooltip.css" />
     <Content Include="Default.html" />
     <Content Include="JS\JS1.js" />
+    <Content Include="JS\webWorkerDemo.js" />
+    <Content Include="JS\Worker1.js" />
     <Content Include="packages.config" />
     <None Include="Scripts\jquery-3.0.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.0.0.js" />
