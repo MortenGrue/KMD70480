@@ -86,7 +86,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Default.html" />
-    <Content Include="HHB_AJAX\Ajax.js" />
+    <Content Include="HHB_AJAX\JS\SynchronousJQ.js" />
+    <Content Include="HHB_AJAX\JS\AsynchronousJQ.js" />
+    <Content Include="HHB_AJAX\JS\AsynchronousJS.js" />
+    <Content Include="HHB_AJAX\JS\SynchronousJS.js" />
     <Content Include="HHB_AJAX\Index.html" />
     <None Include="HHB_AJAX\data.json" />
     <Content Include="HHB_WebWorker\Index.html" />

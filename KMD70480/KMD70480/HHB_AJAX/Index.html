@@ -4,19 +4,23 @@
     <title>AJAX</title>
     <meta charset="utf-8" />
     <style type="text/css">
-        ol {
-            list-style-type: none;
-        }
     </style>
 </head>
 <body>
-    <label for="txtMessage">Message:</label><br />
-    <input name="message" type="text" id="txtMessage" />
-    <hr />
-    <button onclick="StartSync();" type="button" id="btnSubmitSync">Sync</button><br />
-    <button onclick="StartASync();" type="button" id="btnSubmitAsync">ASync</button><hr />
-    <ol id="list"></ol>
+<b>JavaScript</b><br/>
+<button onclick="StartSync();" type="button" id="btnSubmitSync">Synchronous JavaScript</button><br/>
+<button onclick="StartASync();" type="button" id="btnSubmitAsync">Asynchronous JavaScript</button><hr/>
+<b>jQuery</b><br/>
+<button onclick="StartSynchronousJQ();" type="button" id="btnSubmitSyncJQuery">Synchronous jQuery</button><br/>
+<button onclick="StartAsynchronousJQ();" type="button" id="btnSubmitAsyncJQuery">Asynchronous jQuery</button><hr/>
+<b>Javascript</b>
+<ol id="list"></ol>
 
-    <script src="../HHB_AJAX/Ajax.js"></script>
+<script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
+<script src="../HHB_AJAX/JS/SynchronousJS.js"></script>
+<script src="../HHB_AJAX/JS/AsynchronousJS.js"></script>
+<script src="../HHB_AJAX/JS/SynchronousJQ.js"></script>
+<script src="../HHB_AJAX/JS/AsynchronousJQ.js"></script>
+
 </body>
 </html>

@@ -27,6 +27,4 @@ function StartWorker() {
     messageWorker.postMessage(message);
     console.log("posting done.");
     document.getElementById("txtMessage").focus();
-
-
 }
