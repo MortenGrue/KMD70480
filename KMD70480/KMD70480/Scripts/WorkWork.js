@@ -8,7 +8,9 @@ function submitMessage() {
         console.log("Worker is supported");
         if (typeof (messageWorker) == "undefined") {
             console.log("Creating worker");
-            messageWorker = new Worker("Scripts/WebWorker.js");
+            messageWorker = new Worker("WebWorker.js");
+         
+            console.log(messageWorker);
             console.log("Worker created");
         }
         console.log("Posting..");

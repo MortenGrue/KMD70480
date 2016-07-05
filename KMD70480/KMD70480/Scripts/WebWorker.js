@@ -1,4 +1,3 @@
-﻿onmessage = function (e) {
+﻿onmessage = function(e) {
     console.log("Message received");
-e.data
-}
+};
