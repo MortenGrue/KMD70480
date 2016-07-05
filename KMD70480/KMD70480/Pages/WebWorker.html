@@ -2,14 +2,19 @@
 <html>
 <head>
     <title>Web Worker</title>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
+    <style type="text/css">
+        ol {
+    list-style-type:none;
+}
+    </style>
 </head>
 <body>
     <label for="txtMessage">Message:</label><br />
     <input name="message" type="text" id="txtMessage" />
     <hr />
     <button onclick="StartWorker();" type="button">Send</button><hr />
-<ul id="list"></ul>
+<ol id="list"></ol>
 
     <script src="../Scripts/WorkWork.js"></script>
 </body>
