@@ -8,6 +8,6 @@
     });
 
 
-    $('#AjaxDiv').load("./Text_demo.txt.txt");
+    $('#AjaxDiv').load("./Text_demo.txt.txt");   
 });
 
