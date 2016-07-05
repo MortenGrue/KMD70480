@@ -125,6 +125,7 @@
     <Content Include="Scripts\jquery-3.0.0.slim.min.js" />
     <Content Include="Scripts\jquery-ui-1.11.4.js" />
     <Content Include="Scripts\jquery-ui-1.11.4.min.js" />
+    <Content Include="Text_demo.txt.txt" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
