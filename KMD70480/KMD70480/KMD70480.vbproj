@@ -59,7 +59,6 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="HHB_AJAX\" />
     <Folder Include="Scripts\" />
   </ItemGroup>
   <ItemGroup>
@@ -87,6 +86,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Default.html" />
+    <Content Include="HHB_AJAX\Ajax.js" />
+    <Content Include="HHB_AJAX\Index.html" />
+    <None Include="HHB_AJAX\data.json" />
     <Content Include="HHB_WebWorker\Index.html" />
     <Content Include="HHB_WebWorker\WorkWork.js" />
     <Content Include="HHB_WebWorker\WebWorker.js" />

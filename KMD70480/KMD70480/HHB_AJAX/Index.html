@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>AJAX</title>
+    <meta charset="utf-8" />
+    <style type="text/css">
+        ol {
+            list-style-type: none;
+        }
+    </style>
+</head>
+<body>
+    <label for="txtMessage">Message:</label><br />
+    <input name="message" type="text" id="txtMessage" />
+    <hr />
+    <button onclick="StartSync();" type="button" id="btnSubmitSync">Sync</button><br />
+    <button onclick="StartASync();" type="button" id="btnSubmitAsync">ASync</button><hr />
+    <ol id="list"></ol>
+
+    <script src="../HHB_AJAX/Ajax.js"></script>
+</body>
+</html>
