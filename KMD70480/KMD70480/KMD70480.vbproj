@@ -91,11 +91,11 @@
     <Content Include="HHB_AJAX\JS\AsynchronousJQ.js" />
     <Content Include="HHB_AJAX\JS\AsynchronousJS.js" />
     <Content Include="HHB_AJAX\JS\SynchronousJS.js" />
-    <Content Include="HHB_AJAX\Index.html" />
+    <Content Include="HHB_AJAX\index.html" />
     <None Include="HHB_AJAX\data.json" />
     <Content Include="HHB_Transform\index.html" />
     <Content Include="HHB_Transform\cat.gif" />
-    <Content Include="HHB_WebWorker\Index.html" />
+    <Content Include="HHB_WebWorker\index.html" />
     <Content Include="HHB_WebWorker\WorkWork.js" />
     <Content Include="HHB_WebWorker\WebWorker.js" />
     <Content Include="Style\Default.css" />
