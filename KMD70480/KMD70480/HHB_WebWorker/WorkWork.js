@@ -1,8 +1,7 @@
 ﻿document.getElementById("txtMessage").focus();
 
-console.log("creating worker..");
 var messageWorker = new Worker("../HHB_WebWorker/WebWorker.js");
-console.log("worker created");
+
 
 document.getElementById("txtMessage")
     .addEventListener("keyup", function (event) {
@@ -19,12 +18,18 @@ messageWorker.onmessage = function (event) {
     ul.appendChild(li);
 }
 
+messageWorker.addEventListener('message',function (event){console.log("using Listener: " + event.data);});
+
 function StartWorker() {
-    console.log("submitMessage method called");
     var message = document.getElementById("txtMessage").value;
-    console.log("pre-message: " + message);
-    console.log("Posting..");
     messageWorker.postMessage(message);
-    console.log("posting done.");
     document.getElementById("txtMessage").focus();
 }
+
+function StartBot() {
+
+//repeat function call every x miliseconds
+    setInterval(function () {
+        messageWorker.postMessage("Hi Human! Im a bot!");
+
+    },1000)}

@@ -60,7 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="HHB_Animation\" />
-    <Folder Include="Scripts\" />
+    <Folder Include="HHB_Forms\JS\" />
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
@@ -93,11 +93,31 @@
     <Content Include="HHB_AJAX\JS\SynchronousJS.js" />
     <Content Include="HHB_AJAX\index.html" />
     <None Include="HHB_AJAX\data.json" />
+    <None Include="HHB_AJAX\Scripts\jquery-3.0.0.intellisense.js" />
+    <Content Include="HHB_AJAX\Scripts\jquery-3.0.0.js" />
+    <Content Include="HHB_AJAX\Scripts\jquery-3.0.0.min.js" />
+    <Content Include="HHB_AJAX\Scripts\jquery-3.0.0.slim.js" />
+    <Content Include="HHB_AJAX\Scripts\jquery-3.0.0.slim.min.js" />
+    <Content Include="HHB_DragDrop\index.html" />
+    <Content Include="HHB_DragDrop\kmd.jpg" />
+    <Content Include="HHB_Forms\succes.html" />
+    <Content Include="HHB_Forms\index.html" />
+    <Content Include="HHB_HTML\index.html" />
     <Content Include="HHB_Transform\index.html" />
     <Content Include="HHB_Transform\cat.gif" />
+    <Content Include="HHB_WebSockets\index.html" />
+    <Content Include="HHB_WebSockets\JS\script.js" />
     <Content Include="HHB_WebWorker\index.html" />
     <Content Include="HHB_WebWorker\WorkWork.js" />
     <Content Include="HHB_WebWorker\WebWorker.js" />
+    <Content Include="packages.config" />
+    <Content Include="HHB_AJAX\Scripts\jquery-3.0.0.min.map" />
+    <Content Include="HHB_AJAX\Scripts\jquery-3.0.0.slim.min.map" />
+    <None Include="Scripts\jquery-3.0.0.intellisense.js" />
+    <Content Include="Scripts\jquery-3.0.0.js" />
+    <Content Include="Scripts\jquery-3.0.0.min.js" />
+    <Content Include="Scripts\jquery-3.0.0.slim.js" />
+    <Content Include="Scripts\jquery-3.0.0.slim.min.js" />
     <Content Include="Style\Default.css" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -140,6 +160,8 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+    <Content Include="Scripts\jquery-3.0.0.slim.min.map" />
+    <Content Include="Scripts\jquery-3.0.0.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

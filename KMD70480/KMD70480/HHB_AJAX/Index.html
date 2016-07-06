@@ -5,23 +5,22 @@
     <meta charset="utf-8" />
     <style type="text/css">
     </style>
+    <script src="Scripts/jquery-3.0.0.js"></script>
 </head>
 <body>
-<h2>JavaScript & jQuery : Synchronous & Asynchronous Call</h2><hr/>
-<h4>JavaScript</h4><br/>
-<button onclick="StartSync();" type="button" id="btnSubmitSync">Synchronous JavaScript</button><br/>
-<button onclick="StartASync();" type="button" id="btnSubmitAsync">Asynchronous JavaScript</button><hr/>
-<h4>jQuery</h4><br/>
-<button onclick="StartSynchronousJQ();" type="button" id="btnSubmitSyncJQuery">Synchronous jQuery</button><br/>
-<button onclick="StartAsynchronousJQ();" type="button" id="btnSubmitAsyncJQuery">Asynchronous jQuery</button><hr/>
-<h4>List</h4>
-<ol id="list"></ol>
-
-<script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
-<script src="../HHB_AJAX/JS/SynchronousJS.js"></script>
-<script src="../HHB_AJAX/JS/AsynchronousJS.js"></script>
-<script src="../HHB_AJAX/JS/SynchronousJQ.js"></script>
-<script src="../HHB_AJAX/JS/AsynchronousJQ.js"></script>
+    <h2>JavaScript & jQuery : Synchronous & Asynchronous Call</h2><hr />
+    <h4>JavaScript</h4><br />
+    <button onclick="StartSync('data.json');" type="button" id="btnSubmitSync">Synchronous JavaScript</button><br />
+    <button onclick="StartASync('data.json');" type="button" id="btnSubmitAsync">Asynchronous JavaScript</button><hr />
+    <h4>jQuery</h4><br />
+    <button onclick="StartSynchronousJQ('data.json')" type="button" id="btnSubmitSyncJQuery">Synchronous jQuery</button><br />
+    <button onclick="StartAsynchronousJQ('data.json');" type="button" id="btnSubmitAsyncJQuery">Asynchronous jQuery</button><hr />
+    <h4>List</h4>
+    <ol id="list"></ol>
+    <script src="JS/SynchronousJS.js"></script>
+    <script src="JS/AsynchronousJS.js"></script>
+    <script src="JS/SynchronousJQ.js"></script>
+    <script src="JS/AsynchronousJQ.js"></script>
 
 </body>
 </html>

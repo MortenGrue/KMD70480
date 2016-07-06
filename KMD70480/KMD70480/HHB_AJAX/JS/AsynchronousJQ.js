@@ -1,7 +1,6 @@
-﻿function StartAsynchronousJQ() {
+﻿function StartAsynchronousJQ(url) {
     console.log("starting Asynchronous jQuery");
 
-    var url = "../HHB_AJAX/data.json";
     $.ajax({
         url: url,
         cache: false,

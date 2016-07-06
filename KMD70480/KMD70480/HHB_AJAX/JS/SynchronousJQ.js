@@ -1,7 +1,6 @@
-﻿function StartSynchronousJQ() {
+﻿function StartSynchronousJQ(url) {
     console.log("starting Synchronous jQuery");
 
-    var url = "../HHB_AJAX/data.json";
     $.ajax({
         url: url,
         cache: false,

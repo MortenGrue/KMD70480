@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <script>
+        function allowDrop(event) {
+            event.preventDefault();
+        }
+        function drag(event) {
+            event.dataTransfer.setData("text", event.target.id);
+        }
+        function drop(event) {
+            event.preventDefault();
+            var data = event.dataTransfer.getData("text");
+            event.target.appendChild(document.getElementById(data));
+        }
+    </script>
+    <h2>Drag & Drop</h2><hr />
+    <h4>Test 1</h4><br />
+    <div id="dropArea" ondrop="drop(event)" ondragover="allowDrop(event)" style="width: 182px; height: 64px;border:black dashed thin"></div><br /><br />
+    <img id="draggableObject" src="kmd.jpg" draggable="true" ondragstart="drag(event)" style="width: 182px; height: 64px;" /><br /><br />
+    <div id="dropArea2" ondrop="drop(event)" ondragover="allowDrop(event)" style="width: 300px; height: 100px; border: black dashed thin"></div>
+    <hr />
+    <h4>Test 2</h4><br />
+    <div id="draggableObject2" draggable="true" ondragstart="drag(event)" style="width: 300px; height: 250px;"><p>I've oft been told by learned friars,<br/>
+            That wishing and the crime are one,<br />
+            And Heaven punishes desires<br />
+            As much as if the deed were done.<br />
+            <br />
+            If wishing damns us, you and I<br />
+            Are damned to all our heart's content;<br />
+            Come, then, at least we may enjoy<br />
+            Some pleasure for our punishment!<br/><br/><em> - by Thomas Moore</em>
+        </p>
+    </div>
+    <br /><br />
+    <div id="dropArea3" ondrop="drop(event)" ondragover="allowDrop(event)" style="width: 300px; height: 250px; border: black dashed thin"></div>
+
+</body>
+</html>

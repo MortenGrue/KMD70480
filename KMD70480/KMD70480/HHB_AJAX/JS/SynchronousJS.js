@@ -1,7 +1,6 @@
-﻿function StartSync() {
+﻿function StartSync(url) {
     console.log("Starting Synchronous JavaScript");
     var ajax = new XMLHttpRequest();
-    var url = "../HHB_AJAX/data.json";
     ajax.open("GET", url, false);
     ajax.send();
     result = JSON.parse(ajax.responseText);

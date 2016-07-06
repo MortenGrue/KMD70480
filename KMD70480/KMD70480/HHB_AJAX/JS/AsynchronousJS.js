@@ -1,4 +1,4 @@
-﻿function StartASync() {
+﻿function StartASync(url) {
     console.log("starting");
     var ajax = new XMLHttpRequest();
     ajax.onreadystatechange = function () {
@@ -24,7 +24,6 @@
         };
     };
 
-    var url = "../HHB_AJAX/data.json";
     ajax.open("GET", url, true);
     ajax.send();
 
