@@ -10,7 +10,7 @@ w.onmessage = function (e) {
 
 function startWorker() {
     var s = $('#TextBox1').val();
-    w.postMessage("Info to Worker: " + s);
+    w.postMessage("Info to Worker: " + s); 
     console.log('Message posted to worker');
 };
 
