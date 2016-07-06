@@ -83,6 +83,7 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="MOS_AjaxDemo\AjaxDemo.html" />
     <Content Include="Content\themes\base\accordion.css" />
     <Content Include="Content\themes\base\all.css" />
     <Content Include="Content\themes\base\autocomplete.css" />
@@ -117,11 +118,11 @@
     <Content Include="Content\themes\base\theme.css" />
     <Content Include="Content\themes\base\tooltip.css" />
     <Content Include="Default.html" />
-    <Content Include="JS\JS1.js" />
-    <Content Include="WebWorker\JS\webWorkerDemo.js" />
-    <Content Include="WebWorker\JS\Worker1.js" />
+    <Content Include="MOS_AjaxDemo\JS\AjaxDemo.js" />
+    <Content Include="MOS_WebWorker\JS\webWorkerDemo.js" />
+    <Content Include="MOS_WebWorker\JS\Worker1.js" />
     <Content Include="packages.config" />
-    <Content Include="WebWorker\WebWorkerDemo.html" />
+    <Content Include="MOS_WebWorker\WebWorkerDemo.html" />
     <None Include="Scripts\jquery-3.0.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.0.0.js" />
     <Content Include="Scripts\jquery-3.0.0.min.js" />
@@ -129,7 +130,7 @@
     <Content Include="Scripts\jquery-3.0.0.slim.min.js" />
     <Content Include="Scripts\jquery-ui-1.11.4.js" />
     <Content Include="Scripts\jquery-ui-1.11.4.min.js" />
-    <Content Include="Text_demo.txt.txt" />
+    <Content Include="MOS_AjaxDemo\Text_demo.txt.txt" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
