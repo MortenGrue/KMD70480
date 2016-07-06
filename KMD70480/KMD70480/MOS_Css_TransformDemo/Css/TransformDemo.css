@@ -1,0 +1,47 @@
+﻿body {
+
+
+
+}
+
+
+#TransformDemoDiv1 {
+    background-color:blue;
+    height: 40px;
+    width: 120px;
+    transform:rotate(20deg);
+}
+
+
+
+#TransformDemoDiv2 {
+    background-color:blue;
+    height: 40px;
+    width: 120px;
+    transform:scaleX(3);
+}
+
+#TransformDemoDiv3 {
+    background-color:blue;
+    height: 40px;
+    width: 120px;
+    transform:scaleY(3);
+}
+
+
+#TransformDemoDiv4 {
+    background-color:blue;
+    height: 40px;
+    width: 120px;
+    transform:translateX(500px);
+}
+
+
+#TransformDemoDiv5 {
+    background-color:blue;
+    height: 40px;
+    width: 120px;
+    transform:translateY(200px);
+}
+
+

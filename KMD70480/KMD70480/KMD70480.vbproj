@@ -119,6 +119,8 @@
     <Content Include="Content\themes\base\tooltip.css" />
     <Content Include="Default.html" />
     <Content Include="MOS_AjaxDemo\JS\AjaxDemo.js" />
+    <Content Include="MOS_Css_TransformDemo\Css\TransformDemo.css" />
+    <Content Include="MOS_Css_TransformDemo\Transform_Demo.html" />
     <Content Include="MOS_WebWorker\JS\webWorkerDemo.js" />
     <Content Include="MOS_WebWorker\JS\Worker1.js" />
     <Content Include="packages.config" />
