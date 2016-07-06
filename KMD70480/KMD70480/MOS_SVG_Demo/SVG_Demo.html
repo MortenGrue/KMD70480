@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <svg width="1000px" height="1000px" viewBox="1000 1000"
+         version="1.1" xmlns="http://www.w3.org/2000/svg"
+         xmlns:xlink="http://www.w3.org/1999/xlink">
+        
+        <g transform="translate(400, 400)">
+            
+            <rect x="100px" y="100px" height="200px" width="300px">
+                <animateTransform attributeType="xml"
+                                  attributeName="transform" type="rotate"
+                                  from="0" to="360"
+                                  begin="0" dur="2s"
+                                  repeatCount="3"
+                                  fill="freeze" />
+
+            </rect>
+            <line x1="-400" y1="-400" x2="400" y2="400" style="stroke: black;" />
+            <line x1="-500" y1="0" x2="500" y2="0" style="stroke: red;" color="red" />
+       </g>
+</svg>
+</body>
+</html>
