@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <h1>Web Sockets</h1><hr />
+    <label for="txtUrl">URL:</label><br />
+    <input name="Url" type="text" id="txtUrl" value="ws://172.16.22.21:1337" /><br/>
+    <button type="button" onclick="StartWebSocket()">Start</button>
+    <button type="button" onclick="StopWebSocket()">Stop</button><hr />
+    <label for="txtMessage">Message:</label><br />
+    <input name="message" type="text" id="txtMessage" />
+    <button type="button" onclick="SendMessage()">Send</button>
+    <hr />
+    <br /><h4>Messages:</h4>
+    <ol id="list"></ol>
+    <script src="JS/script.js"></script>
+
+</body>
+</html>

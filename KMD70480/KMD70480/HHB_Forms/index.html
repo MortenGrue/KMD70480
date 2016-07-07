@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="../Scripts/jquery-3.0.0.js"></script>
+</head>
+<body>
+<form method="post" onsubmit="return Validate()">
+
+    <label id="lblError"></label><br /><br />
+    <label id="lblName">Name</label><input id="txtname" type="text"/><br/>
+    <label id="lblAge">Age</label><input id="txtAge" type="number"/><br/>
+    <label id="lblEmail">Email</label><input id="txtEmail" type="email"/>
+    <br/><br/>
+    <button type="submit" id="btnSubmit">Submit</button>
+
+</form>
+<script>
+    function Validate() {
+        console.log("start");
+        var hasError = false;
+        var name = document.getElementById("txtName");
+        var age = document.getElementById("txtAge");
+        var email = document.getElementById("txtEmail");
+        var error = document.getElementById("lblError");
+
+        if (name.value == "") {
+            console.log("error: name is wrong");
+            error.value = "<b>Error:</b><br/>Your Name is wrong!";
+            hasError = true;
+        }
+        //if (hasError) {
+        //    return false;
+        //} else {
+        //    return true;
+        //}
+        return false;
+    }
+</script>
+</body>
+</html>

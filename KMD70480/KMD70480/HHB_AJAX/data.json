@@ -1,0 +1,17 @@
+﻿[
+  {
+    "CustomerID": "ALFKI",
+    "ContactName": "Maria Anders",
+    "CompanyName": "Alfreds Futterkiste"
+  },
+  {
+    "CustomerID": "ANATR",
+    "ContactName": "Ana Trujillo",
+    "CompanyName": "Ana Trujillo Emparedados y helados"
+  },
+  {
+    "CustomerID": "ANTON",
+    "ContactName": "Antonio Moreno",
+    "CompanyName": "Antonio Moreno Taquería"
+  }
+]
