@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="../Scripts/jquery-3.0.0.js"></script>
+	<meta charset="utf-8" />
+    <style>
+        .error {
+            border:2px solid red;
+        }
+        .good {
+            border:2px solid green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Form validation demo</h1>
+
+    <form onsubmit="return Validate()" title="testform" id="Form1" method="post">
+        <input name="Id" type="number" id="IdField" />
+        <br />
+        <input name="text1" type="text" id="textBox1" placeholder="Validated text" onkeyup="ValidateTextBox1();" class="text"/>
+        <br />
+        <input name="text2" type="text" id="textBox2" placeholder="Not live validated text" />
+        <br />
+        <input type="submit" id="Button1" value="Submit" />
+    </form>
+
+    <script src="JS/FormValidationDemo.js"></script>
+</body>
+</html>

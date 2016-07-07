@@ -124,6 +124,8 @@
     <Content Include="MOS_CORSDemo\JS\CORSDemo.js" />
     <Content Include="MOS_Css_TransformDemo\Css\TransformDemo.css" />
     <Content Include="MOS_Css_TransformDemo\Transform_Demo.html" />
+    <Content Include="MOS_FormDemo\FormDemo.html" />
+    <Content Include="MOS_FormDemo\JS\FormValidationDemo.js" />
     <Content Include="MOS_SVG_Demo\SVG_Demo.html" />
     <Content Include="MOS_WebWorker\JS\webWorkerDemo.js" />
     <Content Include="MOS_WebWorker\JS\Worker1.js" />
