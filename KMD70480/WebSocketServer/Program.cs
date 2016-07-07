@@ -16,6 +16,7 @@ namespace WebSocketServer
         {
             Console.WriteLine("Console running!");
             IPAddress ipAddress = Dns.GetHostAddresses("localhost")[1];
+            Random r = new Random();
 
             Console.WriteLine("Ipaddress: " + ipAddress);
             try
@@ -29,14 +30,20 @@ namespace WebSocketServer
 
                 while (client.Connected)
                 {
-                    Random r = new Random();
-                    int i = r.Next(5);
-                    Thread.Sleep(i);
-                    client.Client.Send(GetDataStream("I just wited for: " + i + "Sec. - Are you still there?"));
+                    if(client.GetStream().DataAvailable)
+                    {
+                        byte[] b = new byte[1000];
+                        client.GetStream().Read(b, 0, 1000);
+                        Console.WriteLine("Read: " + System.Text.Encoding.Default.GetString(b) + " From client") ;
+                    }
+                    string s = Console.ReadLine();
+                    Console.WriteLine("Sent: \""+ s +"\" to the client.)");
+                    client.Client.Send(GetDataStream(s));
                 }
             }
-            catch
+            catch (Exception e)
             {
+                Console.WriteLine(e.StackTrace);
                 Console.WriteLine("Ups...");
             }
             Console.ReadLine();
@@ -44,7 +51,7 @@ namespace WebSocketServer
 
         private static byte[] GetDataStream(string s)
         {
-            return Convert.FromBase64String(s);
+            return Encoding.ASCII.GetBytes(s);
         }
     }
 }
