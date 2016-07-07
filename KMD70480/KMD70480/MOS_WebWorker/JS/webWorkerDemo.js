@@ -5,7 +5,7 @@ startWorker();
 w.onmessage = function (e) {
     $('#FirstDiv').append("<br /> " + e.data);
     console.log('Message received from worker');
-
+    w.terminate();
 }
 
 function startWorker() {
