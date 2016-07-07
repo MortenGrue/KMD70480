@@ -2,9 +2,87 @@
 <html>
 <head>
     <title></title>
-	<meta charset="utf-8" />
+    <meta charset="utf-8" />
+    <style>
+        li {
+            font-size: 50px;
+        }
+
+
+
+            li:nth-child(odd) {
+                color: greenyellow;
+            }
+
+            li:nth-child(3n+4) {
+                color: blueviolet;
+            }
+
+            li:first-child {
+                color: blue;
+            }
+
+        div {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 25px;
+            left: 300px;
+            background-color: darkmagenta;
+        }
+
+            div:hover {
+                background-color: darkslategrey;
+            }
+
+        input {
+            border: black solid thin;
+            color: black;
+        }
+
+            input:focus {
+                background-color: whitesmoke;
+                color: black;
+            }
+
+            input:invalid {
+                background-color: firebrick;
+                color: whitesmoke;
+            }
+
+            input:valid {
+                background-color: darkgreen;
+                color: whitesmoke;
+            }
+
+            input:read-only {
+                background-color: black;
+                color: whitesmoke;
+            }
+            p:before {
+                 content:"This is a Paragraph->";
+            }
+    </style>
 </head>
 <body>
-
+    <ul>
+        <li>Aaa</li>
+        <li>Bbb</li>
+        <li>Ccc</li>
+        <li>Ddd</li>
+        <li>Eee</li>
+        <li>Fff</li>
+        <li>Ggg</li>
+        <li>Hhh</li>
+    </ul>
+    <p>
+        nth-child(3n+4) = blueviolet<br />
+        nth child(odd) = greenyellow<br />
+        first child = blue<br />
+    </p>
+    <div>TEST</div>
+    <input type="email" /><br />
+    <input pattern="[0-9]{3}" />
+    <input readonly="readonly" value="this input box is readonly" />
 </body>
 </html>

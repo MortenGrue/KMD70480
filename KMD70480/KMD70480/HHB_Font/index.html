@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <style>
+        .parent {
+            font-size: 2em;
+        }
+
+        .child {
+            font-size: 2em;
+        }
+
+        .parentRem {
+            font-size: 2rem;
+        }
+
+        .childRem {
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fonts</h1><hr />
+    <h2>EM</h2><br />
+    <div class="parent">
+        EM Parent Text
+        <div class="child">
+            EM Child Text (sizes are adding together)
+        </div>
+    </div>
+<div class="parent">
+    EM Another Parent
+</div>
+    <hr/>
+    <h2>REM</h2><br />
+    <div class="parentRem">
+        REM Parent Text
+        <div class="childRem">
+            REM Child Text
+        </div>
+    </div>
+    <div class="childRem">
+        REM Another Parent
+    </div>
+</body>
+</html>

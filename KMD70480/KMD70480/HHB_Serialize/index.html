@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <form id="myform" method="get" action="abc.htm">
+        <input name="x" id="x" value="123456" />
+        <input name="x" id="x" value="Hello" />
+        <input name="x" id="x" value="blah458" />
+        <button type="button" onclick="fnserialize()">Serialize</button>
+        <button type="button" onclick="fnserializeArray()">Serialize array</button>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script src="../Scripts/jquery-3.0.0.js"></script>
+<script>
+    function fnserialize() {
+        console.log($("#myform").serialize());
+    }
+    function fnserializeArray() {
+
+        console.log($("#myform").serializeArray());
+    }
+</script>
+</body>
+</html>

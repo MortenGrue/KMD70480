@@ -85,6 +85,12 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="HHB_CaptureBubble\index.html" />
+    <Content Include="HHB_Font\index.html" />
+    <Content Include="HHB_Overflow\index.html" />
+    <Content Include="HHB_Position\index.html" />
+    <Content Include="HHB_Serialize\index.html" />
+    <Content Include="HHB_Text\index.html" />
     <Content Include="index.html" />
     <Content Include="HHB_AJAX\JS\SynchronousJQ.js" />
     <Content Include="HHB_AJAX\JS\AsynchronousJQ.js" />
