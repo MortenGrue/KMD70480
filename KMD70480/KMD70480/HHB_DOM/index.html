@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="../Scripts/jquery-3.0.0.js"></script>
+    <style>
+        div {
+            left: 40%;
+            width: 200px;
+            height: 200px;
+            background-color: mediumspringgreen;
+        }
+
+        section {
+            width: 400px;
+            height: 400px;
+            background-color: darkkhaki;
+        }
+    </style>
+</head>
+<body>
+<button type="button" id="btnRemove">Remove</button>
+<section id="container"></section>
+<script>
+    $('document').ready(function () {
+        // CREATE DIV
+        var newDiv = document.createElement('div');
+        // CREATE PARA IN DIV
+        var newPara = document.createElement('p');
+        // CREATE TEXT IN PARA
+        var myText = document.createTextNode("Some Text To Add Here");
+        // APPEND TEXT TO PARA
+        newPara.appendChild(myText);
+        // APPEND PARA TO DIV
+        newDiv.appendChild(newPara);
+        // APPEND DIV TO CONTAINER
+        $('#container').append(newDiv);    // COPIED BELOW IN JAVASCRIPT
+        document.getElementById('container').appendChild(newDiv);
+        // COPY A NODE
+        var divClone = $(newDiv).clone();
+        // var divClone = newDiv.cloneNode(true);
+        // GIVE AN ID
+        $(divClone).addClass('divCloneClass');
+        // APPEND AFTER CONTAINER
+        divClone.attr('id', 'test');
+        // divClone.setAttribute('id', 'test');
+        $(divClone).insertAfter('#container');
+        // ADD LISTENER TO BUTTON
+        // AND 
+        // REMOVE ITEM FROM DOM
+        document.getElementById('clickme').addEventListener('click', function () {
+            var cloneNode = document.getElementById('test');
+            cloneNode.parentNode.removeChild(cloneNode);
+            /* jquery    $('#test').remove(); */
+
+            // var myAttribute = document.createAttribute('id');
+            // myAttribute.value = "test";
+
+        });
+
+    });
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <style>
+        #canvasDiv {
+            width: 440px;
+            height: 600px;
+           
+            margin-left: auto;
+            margin-right: auto;
+            border: black solid 5px;
+            background-color: cadetblue;
+            padding: 0;
+        }
+
+        #myCanvas {
+            width: 200px;
+            height: 200px;
+            border: black solid 2px;
+            background-color: peachpuff;
+            padding: 0;
+            margin: 5px;
+        }
+
+        #myCanvas2 {
+            width: 200px;
+            height: 200px;
+            border: black solid 2px;
+            background-color: aliceblue;
+            padding: 0;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Canvas</h1><hr />
+    <div id="canvasDiv">
+        <canvas id="myCanvas"></canvas>
+        <canvas id="myCanvas2"></canvas>
+    </div>
+    <script>
+        var mycanvas = document.getElementById('myCanvas');
+        var ctx = mycanvas.getContext('2d');
+        /* Rectangle */
+        ctx.lineWidth = 5;
+        ctx.strokeRect(30, 30, 80, 80);
+        ctx.fillStyle = "#00FF00";
+        ctx.fillRect(30, 30, 80, 80);
+        ctx.font = "60px Arial";
+        ctx.strokeStyle = "black";
+        ctx.lineWidth = 2;
+        ctx.strokeText("canvas", 10, 125, 275);
+
+        /* Circle */
+
+        var mycanvas2 = document.getElementById('myCanvas2');
+        var ctx2 = mycanvas2.getContext('2d');
+        ctx2.beginPath();
+        ctx2.arc(50, 50, 50, 0, 2 * Math.PI);
+        ctx2.stroke();
+        ctx2.fillStyle = "#00FF00";
+        ctx2.fill();
+        ctx2.font = "40px Arial";
+        ctx2.fillText("testing writing on a canvas", 10, 125, 275);
+        
+    </script>
+</body>
+</html>
