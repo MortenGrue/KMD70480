@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <style>
+        div {
+            width: 50px;
+            height:50px;
+            background-color:black;
+        }
+    </style>
+    <script src="../Scripts/jquery-3.0.0.js"></script>
+</head>
+<body>
+    <script>
+        $(document).ready(function () {
+
+            //$('#Div1').on('mouseover', f2);
+           // document.getElementById('Div1').addEventListener('mouseover', f2);
+            //$('#Div1').on('click', f3);
+            document.getElementById('Div1').addEventListener('click', f3);
+        });
+
+        function f1() {
+            console.log("trigger f1");
+        }
+
+        function f2() {
+            console.log("trigger f2");
+        }
+
+        function f3() {
+            console.log("trigger f3");
+        }
+
+        
+    </script>
+
+    <div id="Div1" onmouseover="f1(); f2()"> Div one</div>
+
+
+
+</body>
+</html>

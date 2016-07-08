@@ -65,21 +65,47 @@ namespace WebSocketServer
                     writer.WriteLine("");
 
                     writer.Flush();
-
+                    writer.AutoFlush = false;
+                    Console.WriteLine(client.Connected);
 
                     while (client.Connected && s != "quit")
                     {
-                        Console.WriteLine(client.Connected);
-                        s = Console.ReadLine();
+                        
+                        //s = Console.ReadLine();
                         //   Console.WriteLine("Sent: "+ s +" to the client.)");
                         //writer.WriteLine(new byte[] { (byte)WrapperBytes.Start }, 1, 0); // start with a 0x00
 
-                        //writer.Write(((char)WrapperBytes.Start)); // start with a 0x00
-                        writer.Write(GetDataStream(s));
-                        writer.Write(((char)WrapperBytes.End)); // end with a 0xFF
-                        writer.Flush();
-
+                        //writer.Write(""); // start with a 0x00
+                        //writer.Write(s);
+                        //writer.Write(((char)WrapperBytes.End)); // end with a 0xFF
+                        //writer.Flush();
+                        
                         //client.Client.Send(new byte[] { (byte)WrapperBytes.End }, 1, 0); // end with a 0xFF
+
+                        if(client.Client.Available > 0)
+                        {
+                            byte[] b = new byte[client.Client.Available + 1];
+
+                            client.Client.Receive(b,1, client.Client.Available, 0);
+                            
+                            s = System.Text.Encoding.UTF8.GetString(b);
+
+                            Console.WriteLine("Recived: " + s);
+
+                        }
+
+                        /*
+                        do
+                        {
+                            client.
+                            s = reader.ReadLine();
+
+                            if(!string.IsNullOrEmpty(s))
+                            {
+                                Console.WriteLine("Recived: " + s);
+                            }
+                        } while (!string.IsNullOrEmpty(s));
+                        */
                     }
                 }
             }

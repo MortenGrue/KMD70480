@@ -58,11 +58,11 @@
     <Reference Include="System.EnterpriseServices" />
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Folder Include="HHB_Animation\" />
     <Folder Include="HHB_Forms\JS\" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
     <Import Include="System" />
@@ -145,6 +145,7 @@
     <Content Include="HHB_WebWorker\index.html" />
     <Content Include="HHB_WebWorker\WorkWork.js" />
     <Content Include="HHB_WebWorker\WebWorker.js" />
+    <Content Include="MOS_EventDemo\EventDemo.html" />
     <Content Include="packages.config" />
     <Content Include="HHB_AJAX\Scripts\jquery-3.0.0.min.map" />
     <Content Include="HHB_AJAX\Scripts\jquery-3.0.0.slim.min.map" />
@@ -175,6 +176,7 @@
     <Content Include="Scripts\jquery-ui-1.11.4.js" />
     <Content Include="Scripts\jquery-ui-1.11.4.min.js" />
     <Content Include="MOS_AjaxDemo\Text_demo.txt.txt" />
+    <Content Include="Test\Competion.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

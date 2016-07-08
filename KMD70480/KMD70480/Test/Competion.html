@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="../Scripts/jquery-3.0.0.js"></script>
+</head>
+<body>
+    
+    <h1>Almost ready to play :)</h1>
+
+    <canvas id="myCanvas2" width="300" height="300" onclick="move()"></canvas>
+
+    <script>
+        $(document).ready(function () {
+            redrawCanvas();
+
+            $(document).keydown('data', function (data) {
+                if (data.which == 39) {
+                    x = x + 5
+                    move();
+                } else if (data.which == 37) {
+                    x = x - 5;
+                    move();
+                } else if (data.which == 38) {
+                    y = y - 5;
+                    move();
+                } else if (data.which == 40) {
+                    y = y +  5;
+                    move();
+                }
+
+
+            });
+
+
+        });
+        var count = 0;
+        var x = 0;
+        var y = 0;
+        var j = 0;
+        var z = 0;
+        function redrawCanvas() {
+            
+            var canvas = document.getElementById('myCanvas2');
+            if (canvas.getContext) {
+                var ctx = canvas.getContext('2d');
+
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                roundedRect(ctx, 12, 12, 184, 174, 15);
+                roundedRect(ctx, 19, 19, 170, 160, 9);
+                roundedRect(ctx, 53, 53, 49, 33, 10);
+                roundedRect(ctx, 53, 119, 49, 49, 6);
+                roundedRect(ctx, 135, 53, 49, 33, 10);
+                roundedRect(ctx, 135, 119, 49, 49, 10);
+
+                ctx.beginPath();
+                ctx.arc(37 + x, 37 + y, 13, Math.PI / 7, -Math.PI / 7, false);
+                ctx.lineTo(31 + x, 37 + y);
+                ctx.fill();
+
+                for (var i = 7; i >= 0 + (x / 16); i--) {
+                    ctx.fillRect(51 + i * 16, 35, 4, 4);
+                }
+
+                for (i = 0; i < 8; i++) {
+                    ctx.fillRect(115, 51 + i * 16, 4, 4);
+                }
+
+                for (i = 0; i < 9; i++) {
+                    ctx.fillRect(51 + i * 16, 99, 4, 4);
+                }
+
+                ctx.beginPath();
+                ctx.moveTo(83+15 - j, 116 - z);
+                ctx.lineTo(83+15 - j, 102 - z);
+                ctx.bezierCurveTo(83+15 - j, 94 - z, 89+15 - j, 88 - z, 97+15 - j, 88 - z);
+                ctx.bezierCurveTo(105+15 - j, 88 - z, 111+15 - j, 94 - z, 111+15 - j, 102 - z);
+                ctx.lineTo(111+15 - j, 116 - z);
+                ctx.lineTo(106.333+15 - j, 111.333 - z);
+                ctx.lineTo(101.666+15 - j, 116 - z);
+                ctx.lineTo(97+15 - j, 111.333 - z);
+                ctx.lineTo(92.333+15 - j, 116 - z);
+                ctx.lineTo(87.666+15 - j, 111.333 - z);
+                ctx.lineTo(83+15 - j, 116 - z);
+                ctx.fill();
+
+                ctx.fillStyle = "white";
+                ctx.beginPath();
+                ctx.moveTo(91+15 - j, 96 - z);
+                ctx.bezierCurveTo(88+15 - j, 96 - z, 87+15 - j, 99 - z, 87+15 - j, 101 - z);
+                ctx.bezierCurveTo(87+15 - j, 103 - z, 88+15 - j, 106 - z, 91+15 - j, 106 - z);
+                ctx.bezierCurveTo(94+15 - j, 106 - z, 95+15 - j, 103 - z, 95+15 - j, 101 - z);
+                ctx.bezierCurveTo(95+15 - j, 99 - z, 94+15 - j, 96 - z, 91+15 - j, 96 - z);
+                ctx.moveTo(103+15 - j, 96 - z);
+                ctx.bezierCurveTo(100+15 - j, 96 - z, 99+15 - j, 99 - z, 99+15 - j, 101 - z);
+                ctx.bezierCurveTo(99+15 - j, 103 - z, 100+15 - j, 106 - z, 103+15 - j, 106 - z);
+                ctx.bezierCurveTo(106+15 - j, 106 - z, 107+15 - j, 103 - z, 107+15 - j, 101 - z);
+                ctx.bezierCurveTo(107+15 - j, 99 - z, 106+15 - j, 96 - z, 103+15 - j, 96 - z);
+                ctx.fill();
+
+                ctx.fillStyle = "black";
+                ctx.beginPath();
+                ctx.arc(101+15 - j, 102 - z, 2, 0, Math.PI * 2, true);
+                ctx.fill();
+
+                ctx.beginPath();
+                ctx.arc(89+15 - j, 102 - z, 2, 0, Math.PI * 2, true);
+                ctx.fill();
+                
+            }
+
+            // A utility function to draw a rectangle with rounded corners.
+
+            function roundedRect(ctx, x, y, width, height, radius) {
+                ctx.beginPath();
+                ctx.moveTo(x, y + radius);
+                ctx.lineTo(x, y + height - radius);
+                ctx.arcTo(x, y + height, x + radius, y + height, radius);
+                ctx.lineTo(x + width - radius, y + height);
+                ctx.arcTo(x + width, y + height, x + width, y + height - radius, radius);
+                ctx.lineTo(x + width, y + radius);
+                ctx.arcTo(x + width, y, x + width - radius, y, radius);
+                ctx.lineTo(x + radius, y);
+                ctx.arcTo(x, y, x, y + radius, radius);
+                ctx.stroke();
+            }
+        }
+
+        function move() {
+            count = (count + 1) % 58;
+            if (count <= 15) {
+                j = j + 5;
+            } else if (count <= 28) {
+                z = z + 5;
+            } else if (count <= 44) {
+                j = j - 5;
+            } else {
+                z = z - 5;
+            }
+            redrawCanvas();
+        }
+    </script>
+</body>
+</html>
