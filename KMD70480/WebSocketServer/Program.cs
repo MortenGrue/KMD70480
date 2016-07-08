@@ -38,7 +38,7 @@ namespace WebSocketServer
                 using (var writer = new StreamWriter(client.GetStream()))
                 using (var reader = new StreamReader(client.GetStream()))
                 {
-                    Thread.Sleep(1000);
+                    Thread.Sleep(1000); //Init can be slow...
 
                     do
                     {
@@ -49,7 +49,7 @@ namespace WebSocketServer
                         {
                             Console.WriteLine(s.Substring(s.IndexOf(':') + 2));
                             key = s.Substring(s.IndexOf(':') + 2);
-                            sha.ComputeHash(GetDataStream(key + "258EAFA5-E914-47DA-95CA-C5AB0DC85B11"));
+                            sha.ComputeHash(GetDataStream(key + "258EAFA5-E914-47DA-95CA-C5AB0DC85B11")); //Magic number fra WebSocket doc.
                         }
 
                     } while (!string.IsNullOrEmpty(s));
@@ -84,28 +84,13 @@ namespace WebSocketServer
 
                         if(client.Client.Available > 0)
                         {
-                            byte[] b = new byte[client.Client.Available + 1];
+                            byte[] b = new byte[client.Client.Available];
+                            client.Client.Receive(b, 0, client.Client.Available, 0);
 
-                            client.Client.Receive(b,1, client.Client.Available, 0);
-                            
-                            s = System.Text.Encoding.UTF8.GetString(b);
+                            s = DecodeRecivedMsg(b);
 
                             Console.WriteLine("Recived: " + s);
-
                         }
-
-                        /*
-                        do
-                        {
-                            client.
-                            s = reader.ReadLine();
-
-                            if(!string.IsNullOrEmpty(s))
-                            {
-                                Console.WriteLine("Recived: " + s);
-                            }
-                        } while (!string.IsNullOrEmpty(s));
-                        */
                     }
                 }
             }
@@ -126,5 +111,39 @@ namespace WebSocketServer
 
 
         private enum WrapperBytes : byte { Start = 0, End = 255 };
+
+
+        public static string DecodeRecivedMsg(byte[] b)
+        {
+            byte[] decoded = new byte[b.Length - 6];
+            byte[] encoded = new byte[b.Length - 6];
+            byte[] keys = new byte[4];
+            int j = 0;
+            int z = 0;
+            int y = 0;
+            foreach (var item in b)
+            {
+                if (y < 2) //First 2 are flags.
+                {
+                }
+                else if (y < 6) // next 4 are the key
+                {
+                    keys[j] = item;
+                    j++;
+                }
+                else //The rest is the massage.
+                {
+                    encoded[z] = item;
+                    z++;
+                }
+                y++;
+            }
+            for (int i = 0; i < encoded.Length; i++)
+            {
+                decoded[i] = (Byte)(encoded[i] ^ keys[i % 4]);
+            }
+            
+            return System.Text.Encoding.UTF8.GetString(decoded);
+        }
     }
 }

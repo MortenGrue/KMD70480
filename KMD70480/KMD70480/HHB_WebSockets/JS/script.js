@@ -27,9 +27,7 @@ function SendMessage() {
     var message = document.getElementById("txtMessage").value;
     Output("Message: " + message, "Client");
     if (connection != null || connection != undefined) {
-        Output(connection.bufferedAmount);
         connection.send(message);
-        Output(connection.bufferedAmount);
     }
 }
 function Status() {
