@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <style>
+        #div1 {
+            width: 50px;
+            height: 50px;
+            background-color: greenyellow;
+            transition: width 1s, height 2s, background-color 3s;
+        }
+
+            #div1:hover {
+                width: 100px;
+                height: 200px;
+                transition: width 1s, height 2s, background-color 3s;
+                background-color: red;
+            }
+
+        #div2 {
+            width: 50px;
+            height: 50px;
+            background-color: purple;
+            transition: width 2s ease-in-out;
+        }
+
+         
+    </style>
+</head>
+<body>
+    <h1>Transition</h1><hr />
+    <div id="div1"></div>
+    <div id="div2"></div>
+</body>
+</html>

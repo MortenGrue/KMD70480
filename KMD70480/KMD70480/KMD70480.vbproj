@@ -59,8 +59,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="HHB_Animation\" />
-    <Folder Include="HHB_Forms\JS\" />
+    <Folder Include="HHB_Keyframes\Scripts\" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -133,13 +132,33 @@
     <Content Include="HHB_AJAX\Scripts\jquery-3.0.0.min.js" />
     <Content Include="HHB_AJAX\Scripts\jquery-3.0.0.slim.js" />
     <Content Include="HHB_AJAX\Scripts\jquery-3.0.0.slim.min.js" />
+    <Content Include="HHB_Keyframes\index.html" />
+    <Content Include="HHB_Keyframes\kmd.jpg" />
+    <Content Include="HHB_Array\index.html" />
+    <Content Include="HHB_Audio\index.html" />
+    <Content Include="HHB_Canvas\index.html" />
+    <Content Include="HHB_Dates\index.html" />
+    <Content Include="HHB_DOM\index.html" />
     <Content Include="HHB_DragDrop\index.html" />
     <Content Include="HHB_DragDrop\kmd.jpg" />
+    <Content Include="HHB_Forms\JS\script.js" />
+    <Content Include="HHB_Forms\Style\style.css" />
     <Content Include="HHB_Forms\succes.html" />
     <Content Include="HHB_Forms\index.html" />
+    <Content Include="HHB_Geolocation\index.html" />
+    <Content Include="HHB_History\index.html" />
     <Content Include="HHB_HTML\index.html" />
+    <Content Include="HHB_Localstorage\index.html" />
+    <Content Include="HHB_Print\index.html" />
+    <Content Include="HHB_Pseudo\index.html" />
+    <Content Include="HHB_RegEx\index.html" />
+    <Content Include="HHB_Sessionstorage\index.html" />
+    <Content Include="HHB_SVG\index.html" />
     <Content Include="HHB_Transform\index.html" />
     <Content Include="HHB_Transform\cat.gif" />
+    <Content Include="HHB_Transitions\index.html" />
+    <Content Include="HHB_VideoAutoplay\index.html" />
+    <Content Include="HHB_Video\index.html" />
     <Content Include="HHB_WebSockets\index.html" />
     <Content Include="HHB_WebSockets\JS\script.js" />
     <Content Include="HHB_WebWorker\index.html" />

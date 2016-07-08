@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+<script src="Scripts/jquery-3.0.0.js"></script>
+</head>
+<body>
+    <h2>Index - <em>by HHB</em></h2>
+    <hr /><h4>HTML, CSS & JavaScript</h4>
+
+    <ul class="myList">
+        <li> <a href="HHB_WebWorker/index.html">Web Worker</a> </li>
+        <li> <a href="HHB_AJAX/index.html">AJAX</a> </li>
+        <li>ø - <a href="HHB_Dates/index.html">Dates</a></li>
+        <li>ø - <a href="HHB_Localstorage/index.html">Localstorage</a> </li>
+        <li>ø - <a href="HHB_Sessionstorage/index.html">Sessionstorage</a> </li>
+        <li>ø - <a href="HHB_History/index.html">History</a> </li>
+        <li>ø - <a href="HHB_Geolocation/index.html">Geolocation</a> </li>
+        <li><a href="HHB_Transform/index.html">Transformation</a> </li>
+        <li><a href="HHB_Keyframes/index.html">Keyframes</a></li>
+        <li><a href="HHB_DOM/index.html">DOM</a></li>
+        <li><a href="HHB_SVG/index.html">SVG</a></li>
+        <li><a href="HHB_Canvas/index.html">Canvas</a></li>
+        <li>ø - <a href="HHB_Pseudo/index.html">Pseudo-classes</a></li>
+        <li>ø - <a href="HHB_Video/index.html">Video</a></li>
+        <li>ø - <a href="HHB_VideoAutoplay/index.html">Video Autoplay</a></li>
+        <li>ø - <a href="HHB_Audio/index.html">Audio</a></li>
+        <li><a href="HHB_WebSockets/index.html">Web Sockets</a></li>
+        <li><a href="HHB_Forms/index.html">Forms</a>*</li>
+        <li>ø - <a href="HHB_RegEx/index.html">Regular Expression</a> </li>
+        <li><a href="HHB_DragDrop/index.html">Drag & Drop</a></li>
+        <li><a href="HHB_HTML/index.html">HTML</a></li>
+        <li><a href="HHB_Array/index.html">Array</a>*</li>
+        <li><a href="HHB_Print/index.html">Print</a></li>
+        <li><a href="HHB_Transitions/index.html">Transitions</a></li>
+    </ul>
+    <script>
+        function sortUL(selector) {
+            $(selector).children("li").sort(function (a, b) {
+                var upA = $(a).text().toUpperCase();
+                var upB = $(b).text().toUpperCase();
+                return (upA < upB) ? -1 : (upA > upB) ? 1 : 0;
+            }).appendTo(selector);
+        }
+        sortUL(".myList");
+    </script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <style>
+        @keyframes test {
+            from {
+                width: 182px;
+                height: 64px;
+                left: 200px;
+                top: 200px;
+            }
+
+            to {
+                width: 364px;
+                height: 128px;
+                top: 500px;
+                left: 600px;
+                transform: rotate(25deg);
+            }
+        }
+
+        @keyframes procent {
+            0% {
+                width: 182px;
+                height: 64px; 
+                top: 400px;  
+                left: 400px;
+            }
+            
+            25% {
+                width: 91px;
+                height: 32px;   
+                top: 200px;  
+                left: 400px;
+            }
+              75% {
+                width: 364px;
+                height: 128px;
+                top: 200px;
+                left: 600px;
+            }
+            100% { 
+                width: 182px;
+                height: 64px; 
+                top: 400px;
+                left: 600px;
+            }
+        }
+
+        #myImage {
+            animation-name: test;
+            animation-duration: 1s;
+            animation-delay: 2.5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            position: relative;
+            left: 200px;
+            top: 200px;
+        }
+
+        .myImage2 {
+            animation-name: procent;
+            animation-duration: 2s;
+            animation-delay: 0.5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            position: absolute;
+            left: 400px;
+            top: 400px;
+        }
+    </style>
+</head>
+<body>
+    <img id="myImage" src="kmd.jpg" alt="thingy" />
+<img id="myImage2" src="kmd.jpg" alt="thingy"/>
+<button type="button" onclick="StartAnimation()"></button>
+<script>
+    function StartAnimation() {
+        var img = document.getElementById('myImage2');
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <h1>List</h1><hr />
+    <button type="button" id="btnReset" onclick="Reset()">Reset</button>
+    <button type="button" id="btnSort" onclick="Sort()">Sort</button>
+    <button type="button" id="btnSortDesc" onclick="SortDesc()">Sort Desc</button>
+    <button type="button" id="btnSplit" onclick="Split()">Split</button>
+    <button type="button" id="btnJoin" onclick="Join()">Join</button>
+    <button type="button" id="btnConcat" onclick="Concat()">Concat</button>
+    <button type="button" id="btnCopyWithin" onclick="CopyWithin()">CopyWithin</button>
+    <button type="button" id="btnEvery" onclick="Every()">Every*</button>
+    <button type="button" id="btnFill" onclick="Fill()">Fill*</button>
+    <button type="button" id="btnFilter" onclick="Filter()">Filter*</button>
+    <button type="button" id="btnFind" onclick="Find()">Find*</button>
+    <button type="button" id="btnFindIndex" onclick="FindIndex()">FindIndex*</button>
+    <button type="button" id="btnForEach" onclick="ForEach()">ForEach*</button>
+    <button type="button" id="btnIndexOf" onclick="IndexOf()">IndexOf*</button>
+    <button type="button" id="btnIsArray" onclick="IsArray()">IsArray*</button>
+    <button type="button" id="btnLastIndexOf" onclick="LastIndexOf()">LastIndexOf*</button>
+    <button type="button" id="btnMap" onclick="Map()">Map*</button>
+    <button type="button" id="btnPop" onclick="Pop()">Pop*</button>
+    <button type="button" id="btnPush" onclick="Push()">Push*</button>
+    <button type="button" id="btnReduce" onclick="Reduce()">Reduce*</button>
+    <button type="button" id="btnReduceRight" onclick="ReduceRight()">ReduceRight*</button>
+    <button type="button" id="btnReverse" onclick="Reverse()">Reverse*</button>
+    <button type="button" id="btnShift" onclick="Shift()">Shift*</button>
+    <button type="button" id="btnSlice" onclick="Slice()">Slice*</button>
+    <button type="button" id="btnSome" onclick="Some()">Some*</button>
+    <button type="button" id="btnToString" onclick="ToString()">ToString*</button>
+    <button type="button" id="btnUnShift" onclick="UnShift()">UnShift*</button>
+    <button type="button" id="btnValueOf" onclick="ValueOf()">ValueOf*</button>
+    <ol id="list"></ol>
+    <script>
+        var myArray;
+        var list = document.getElementById('list');
+
+        Reset();
+        Output(myArray);
+
+        function Output(tempArray) {
+
+            list.innerHTML = "";
+            for (var i = 0; i < tempArray.length; i++) {
+                console.log(tempArray[0]);
+                var li = document.createElement('li');
+                var text = document.createTextNode(tempArray[i]);
+                li.appendChild(text);
+                list.appendChild(li);
+            }
+        }
+        function Reset() {
+            myArray = ["Bob", "Thomas", "Alice", "Peter", "Jasper", "Rasmus"];
+            Output(myArray);
+        }
+        function Sort() {
+            Output(myArray.sort());
+        }
+        function SortDesc() {
+            Output(myArray.sort().reverse());
+        }
+        function Split() {
+
+            myArray.splice(2, 1, "Jonas", "Jasmine");
+            Output(myArray);
+        }
+        function Join() {
+            list.innerHTML = "";
+            var li = document.createElement('li');
+            var text = document.createTextNode(myArray.join(' and '));
+            li.appendChild(text);
+            list.appendChild(li);
+        }
+
+        function Concat() {
+
+            var tempArray = ["Kim", "Phil"];
+            var tempArray2 = ["Jonas", "Jasmine"];
+            Output(tempArray.concat(tempArray2));
+        }
+        function CopyWithin() {
+            Output(myArray.copyWithin(1, 2));
+        }
+        function Every() { alert("Not Implemented"); }
+        function Fill() { alert("Not Implemented"); }
+        function Filter() { alert("Not Implemented"); }
+        function Find() { alert("Not Implemented"); }
+        function FindIndex() { alert("Not Implemented"); }
+        function ForEach() { alert("Not Implemented"); }
+        function IndexOf() { alert("Not Implemented"); }
+        function IsArray() { alert("Not Implemented"); }
+        function LastIndexOf() { alert("Not Implemented"); }
+        function Map() { alert("Not Implemented"); }
+        function Pop() { alert("Not Implemented"); }
+        function Push() { alert("Not Implemented"); }
+        function Reduce() { alert("Not Implemented"); }
+        function ReduceRight() { alert("Not Implemented"); }
+        function Reverse() { alert("Not Implemented"); }
+        function Shift() { alert("Not Implemented"); }
+        function Slice() { alert("Not Implemented"); }
+        function Some() { alert("Not Implemented"); }
+        function ToString() { alert("Not Implemented"); }
+        function UnShift() { alert("Not Implemented"); }
+        function ValueOf() { alert("Not Implemented"); }
+    </script>
+</body>
+</html>

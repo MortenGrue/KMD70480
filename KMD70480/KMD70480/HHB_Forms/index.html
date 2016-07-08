@@ -4,39 +4,24 @@
     <title></title>
     <meta charset="utf-8" />
     <script src="../Scripts/jquery-3.0.0.js"></script>
+    <link href="Style/style.css" type="text/css" rel="stylesheet"/>
+    <style>
+    
+    </style>
 </head>
 <body>
-<form method="post" onsubmit="return Validate()">
-
-    <label id="lblError"></label><br /><br />
-    <label id="lblName">Name</label><input id="txtname" type="text"/><br/>
-    <label id="lblAge">Age</label><input id="txtAge" type="number"/><br/>
-    <label id="lblEmail">Email</label><input id="txtEmail" type="email"/>
+<form method="post" onsubmit="return Validate(event)">
+    <ul id="error"></ul><br /><br />
+    <label id="lblName">Name</label>
+    <input id="txtName" class="txtbox" type="text"/>*<br /><br />
+    <label id="lblAge">Age</label>
+    <input id="txtAge" class="txtbox" type="text" pattern="[0-3]{3}"/><br/><br />
+    <label id="lblEmail">Email</label>
+    <input id="txtEmail" class="txtbox" type="text"/>
     <br/><br/>
     <button type="submit" id="btnSubmit">Submit</button>
 
 </form>
-<script>
-    function Validate() {
-        console.log("start");
-        var hasError = false;
-        var name = document.getElementById("txtName");
-        var age = document.getElementById("txtAge");
-        var email = document.getElementById("txtEmail");
-        var error = document.getElementById("lblError");
-
-        if (name.value == "") {
-            console.log("error: name is wrong");
-            error.value = "<b>Error:</b><br/>Your Name is wrong!";
-            hasError = true;
-        }
-        //if (hasError) {
-        //    return false;
-        //} else {
-        //    return true;
-        //}
-        return false;
-    }
-</script>
+<script src="JS/script.js"></script>
 </body>
 </html>

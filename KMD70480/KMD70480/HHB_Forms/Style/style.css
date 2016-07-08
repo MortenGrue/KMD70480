@@ -1,0 +1,15 @@
+﻿body {
+}
+
+.txtbox {
+    border: medium solid;
+    border-color: black;
+}
+
+.ok {
+    border-color: green;
+}
+
+.fail {
+    border-color: red;
+}

@@ -4,13 +4,14 @@ function StartWebSocket() {
     if (connection == null || connection == undefined) {
         connection = new WebSocket(document.getElementById('txtUrl').value);
         console.log(connection.url);
-        Output("Starting Websocket", "Client");
     } else {
 
         Output("Websocket is already running", "Client");
     }
 }
 function StopWebSocket() {
+    connection.close();
+    Status();
     connection = null;
     Output("Websocket stopped", "Client");
 }
@@ -23,18 +24,21 @@ function Output(message, from) {
 }
 
 function SendMessage() {
-
     var message = document.getElementById("txtMessage").value;
-    Output("Sending message to server: " + message,"Client");
+    Output("Message: " + message, "Client");
     if (connection != null || connection != undefined) {
         Output(connection.bufferedAmount);
         connection.send(message);
         Output(connection.bufferedAmount);
     }
 }
+function Status() {
+    Output("ReadyState: " + connection.readyState + " |Buffered amount: " + connection.bufferedAmount + " |BinaryType: " + connection.binaryType, "Client");
+   
+}
 connection.onopen = function () {
-    connection.send('Ping');
-    Output("Pinging Server", "Client");
+    Output("Starting Websocket", "Client");
+    SendMessage();
 }
 connection.onerror = function (error) {
     Output("WebSocket Error", "Client");
@@ -43,6 +47,9 @@ connection.onerror = function (error) {
 connection.onmessage = function (e) {
     Output(e.data, "Server");
 }
-
+connection.onclose = function(e) {
+    Output("WebSocket Closed", "Client");
+    connection.close();
+}
 
 
