@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <style>
+        /*div {
+            background-color: blueviolet;
+            color: white;
+            width: 50px;
+            height: 50px;
+        }
+
+        p {
+            text-overflow: ellipsis;
+        }*/
+
+        #div1 {
+            white-space: nowrap;
+            width: 12em;
+            overflow: hidden;
+            text-overflow: clip;
+            border: 1px solid #000000;
+        }
+
+        #div2 {
+            white-space: nowrap;
+            width: 12em;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            border: 1px solid #000000;
+        }
+    </style>
+</head>
+
+<body>
+    <!--<div>
+        <p>Hello World a sda sd asd as s d</p>
+    </div>-->
+
+    <p>The following two divs contains a long text that will not fit in the box. As you can see, the text is clipped.</p>
+
+    <p>This div uses "text-overflow:clip":</p>
+    <div id="div1">This is some long text that will not fit in the box</div>
+
+    <p>This div uses "text-overflow:ellipsis":</p>
+    <div id="div2">This is some long text that will not fit in the box</div>
+
+</body>
+</html>

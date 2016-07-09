@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <style>
+        #parent {
+            width: 300px;
+            height: 100px;
+            background-color: red;
+            top: 50px;
+            left: 50px;
+            position: absolute;
+        }
+
+        #child {
+            width: 250px;
+            height: 50px;
+            background-color: yellowgreen;
+            top: 25px;
+            left: 25px;
+            position: relative;
+        }
+          #parent2 {
+            width: 300px;
+            height: 100px;
+            background-color: blueviolet;
+            top: 50px;
+            left: 400px;
+            position: absolute;
+        }
+        #child2 {
+            width: 250px;
+            height: 50px;
+            background-color: yellow;
+            top: 25px;
+            left: 25px;
+            position: relative;
+        }
+
+      
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <div id="child">
+            <b>bubbleing -> child first -> then parent</b>
+        </div>
+    </div>
+    <div id="parent2">
+        <div id="child2">
+            <b>trickling -> parent first -> then child</b>
+        </div>
+    </div>
+<script>
+    
+    document.getElementById('parent').addEventListener('click', function () { alert('Parent Capture'); }, true);
+    document.getElementById('child').addEventListener('click', function () { alert('Child Capture'); }, true);
+    document.getElementById('parent').addEventListener('click', function () { alert('Parent Bubble'); }, false);
+    document.getElementById('child').addEventListener('click', function () { alert('Child Bubble'); }, false);
+
+</script>
+</body>
+</html>
