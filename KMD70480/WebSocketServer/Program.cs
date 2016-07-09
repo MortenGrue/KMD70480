@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Net.Sockets;
 using System.Net;
 using System.IO;
@@ -11,35 +8,29 @@ using System.Security.Cryptography;
 
 namespace WebSocketServer
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
             Console.WriteLine("Console running!");
-            IPAddress ipAddress = Dns.GetHostAddresses("localhost")[1];
-            Random r = new Random();
-            
+            IPAddress ipAddress = Dns.GetHostAddresses("localhost")[1];    
             Console.WriteLine("Ipaddress: " + ipAddress);
 
             string s = string.Empty;
             string key = string.Empty;
-            var dict = new Dictionary<string,string>();
             SHA1 sha = new SHA1CryptoServiceProvider();
             try
             {
                 TcpListener listner = new TcpListener(ipAddress, 1337);
                 listner.Start();
-
                 TcpClient client = listner.AcceptTcpClient();
 
                 Console.WriteLine("Connected");
-                
                 
                 using (var writer = new StreamWriter(client.GetStream()))
                 using (var reader = new StreamReader(client.GetStream()))
                 {
                     Thread.Sleep(1000); //Init can be slow...
-
                     do
                     {
                         s = reader.ReadLine();
@@ -49,7 +40,7 @@ namespace WebSocketServer
                         {
                             Console.WriteLine(s.Substring(s.IndexOf(':') + 2));
                             key = s.Substring(s.IndexOf(':') + 2);
-                            sha.ComputeHash(GetDataStream(key + "258EAFA5-E914-47DA-95CA-C5AB0DC85B11")); //Magic number fra WebSocket doc.
+                            sha.ComputeHash(GetDataStream(key + "258EAFA5-E914-47DA-95CA-C5AB0DC85B11")); //Magic number from WebSocket doc.
                         }
 
                     } while (!string.IsNullOrEmpty(s));
@@ -70,14 +61,13 @@ namespace WebSocketServer
 
                     while (client.Connected && s != "quit")
                     {
-                        
                         //s = Console.ReadLine();
                         //   Console.WriteLine("Sent: "+ s +" to the client.)");
                         //writer.WriteLine(new byte[] { (byte)WrapperBytes.Start }, 1, 0); // start with a 0x00
 
                         //writer.Write(""); // start with a 0x00
                         //writer.Write(s);
-                        //writer.Write(((char)WrapperBytes.End)); // end with a 0xFF
+                        //writer.Write(((char)WrapperBytes.End)); // end with a 0xFF 
                         //writer.Flush();
                         
                         //client.Client.Send(new byte[] { (byte)WrapperBytes.End }, 1, 0); // end with a 0xFF
@@ -109,9 +99,7 @@ namespace WebSocketServer
             return Encoding.UTF8.GetBytes(s);
         }
 
-
         private enum WrapperBytes : byte { Start = 0, End = 255 };
-
 
         public static string DecodeRecivedMsg(byte[] b)
         {
@@ -142,7 +130,6 @@ namespace WebSocketServer
             {
                 decoded[i] = (Byte)(encoded[i] ^ keys[i % 4]);
             }
-            
             return System.Text.Encoding.UTF8.GetString(decoded);
         }
     }
